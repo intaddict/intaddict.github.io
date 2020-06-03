@@ -1,15 +1,13 @@
 <script>
-   function sendEmail(){
+   function sendEmail(key){
   Email.send({
-    Host : "smtp.yourisp.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
+    Host : "smtp.gmail.com",
+    Username : "nkwim1933@gmail.com",
+    Password : "nkwimishere",
+    To : 'susanadams1133@gmail.com',
+    From : "nkwim1933@gmail.com",
     Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+    Body : key
+  });
    }
   </script>
